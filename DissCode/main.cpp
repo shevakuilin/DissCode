@@ -6,8 +6,8 @@
 //  Copyright © 2019 ShevaKuilin. All rights reserved.
 //
 
-#include "time.h" // - Note: debug 代码
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -63,15 +63,10 @@ string fib(int n) {
 }
 
 int main(int argc, const char * argv[]) {
-    clock_t start, finish; // - Note: debug 代码
     int n;
-    cout << "please input:"<< endl;
     while (cin>>n) {
-        start = clock(); // - Note: debug 代码
         string result = fib(n);
-        finish = clock(); // - Note: debug 代码
-        cout << "f(n) = " << result << endl;
-        printf("%f seconds\n",(double)(finish-start)/CLOCKS_PER_SEC); // - Note: debug 代码
+        cout << result << endl;
     }
     
     return 0;
